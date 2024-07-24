@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Vast+Shadow&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.body {
+    background: url("../Photos/Snake.jpg");
+    min-height: 100vh;
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+
+}
+#board {
+    background: linear-gradient(rgb(177, 212, 177, 0.7), rgb(212, 212, 156, 0.7));
+    backdrop-filter: blur(30px);
+    width: 90vmin;
+    height: 92vmin; 
+    border: 2.5px solid rgb(255, 252, 252);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: grid;
+    grid-template-rows: repeat(18, 1fr);
+    grid-template-columns: repeat(18, 1fr);
+    border-radius: 30px;
+}
+
+
+#box {
+    background: linear-gradient(rgba(93, 90, 90, 0.8), rgba(125, 125, 121, 0.6));
+    backdrop-filter: blur(20px);
+    width: 39vmin;
+    height: 35vmin; 
+    top: 120px;
+    right: 70px;
+    padding: 10px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 3%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border: 2px solid white;
+    border-radius: 30px;
+    position: absolute;
+}
+
+#scoreBox, #levelBox, #highScoreBox {
+    color: white;
+    font-size: 120px;
+    font-family: "Vast Shadow", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 5px 0;
+}
+
+.head{
+    background-color: rgb(180, 180, 12);
+    border: .25vmin solid white;
+    border-radius: 25px;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+    transform: scale(1.2);
+    transition: transform 0.1s;
+    transform-origin: center;
+
+}
+
+.snake{
+    background-color: rgb(207, 204, 16);
+    border: .25vmin solid white;
+    border-radius: 12px;
+
+}
+
+.food {
+    background: linear-gradient(rgb(240, 31, 31), rgb(220, 208, 200));
+    border: .25vmin solid black;
+    border-radius: 100%;
+
+}
